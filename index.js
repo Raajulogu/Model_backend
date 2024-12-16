@@ -75,7 +75,7 @@ app.get('/api/files', (req, res) => {
       }
   
       // Use 'exec' to open the file
-      exec(`xdg-open "${filePath}"`, (err) => {
+      exec(`start "${filePath}"`, (err) => {
         if (err) {
           console.error('Error opening file:', err);
           return res.status(500).json({ error: 'Failed to open file' });
